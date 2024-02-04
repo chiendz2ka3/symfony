@@ -10,6 +10,7 @@ use App\Entity\Review;
 use App\Entity\User;
 use App\Form\OfferType;
 use App\Form\ReviewType;
+use App\Service\PriceCalculator;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;

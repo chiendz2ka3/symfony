@@ -10,7 +10,6 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
 /**
- * @Security("has_role('ROLE_EDITOR')")
  * @Route("/administration/categories")
  */
 class CategoryController extends Controller

@@ -8,7 +8,7 @@ use App\Form\UserType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
-
+use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 class SecurityController extends Controller
 {
     /**
@@ -28,7 +28,12 @@ class SecurityController extends Controller
             $user->setPassword($passwordHash);
             $user->setMoney(500);
             $role = $this->getDoctrine()->getRepository(Role::class)->findOneBy(['name' => 'ROLE_USER']);
-            $user->addRole($role);
+           
+            if ($role) {
+                $user->addRole($role);
+            } else {
+                return $this->render("main/security/register.html.twig", ['register_form' => $form->createView()]);
+            }
 
             $em = $this->getDoctrine()->getManager();
             $em->persist($user);

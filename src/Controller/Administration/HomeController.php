@@ -7,7 +7,6 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 /**
- * @Security("has_role('ROLE_EDITOR')")
  * @Route("/administration")
  */
 class HomeController extends Controller

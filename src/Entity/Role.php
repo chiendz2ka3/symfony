@@ -89,8 +89,5 @@ class Role
     {
         $this->users = $users;
     }
-
-
-
 }
 

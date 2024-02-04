@@ -15,7 +15,6 @@ use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\HttpFoundation\Request;
 
 /**
- * @Security("has_role('ROLE_EDITOR')")
  * @Route("/administration/offers")
  */
 class OfferController extends Controller

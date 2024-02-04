@@ -15,7 +15,6 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\HttpFoundation\Request;
 
 /**
- * @Security("has_role('ROLE_ADMIN')")
  * @Route("/administration/users")
  */
 class UserController extends Controller

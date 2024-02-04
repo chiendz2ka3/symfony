@@ -14,7 +14,6 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 /**
- * @Security("has_role('ROLE_EDITOR')")
  * @Route("/administration")
  */
 class PromotionController extends Controller
